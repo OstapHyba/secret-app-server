@@ -12,9 +12,9 @@ class UserTest(TestCase):
     invalid_secret_text_error_2 = "This field may not be blank."
 
     valid_expire_after = 1
-    invalid_expire_after_1 = 0
+    invalid_expire_after_1 = -1
     invalid_expire_after_2 = 4294967295
-    invalid_expire_after_error_1 = "Ensure this value is greater than or equal to 1."
+    invalid_expire_after_error_1 = "Ensure this value is greater than or equal to 0."
     invalid_expire_after_error_2 = "Ensure this value is less than or equal to 4294967294."
 
     valid_expire_after_views = 1

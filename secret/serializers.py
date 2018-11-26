@@ -16,7 +16,7 @@ class SecretSerializer(serializers.Serializer):
         )
     expireAfterViews = serializers.IntegerField(
         required= True,
-        min_value= C.MIN_INT32_VALUE,
+        min_value= C.MIN_INT32_VALUE + 1,
         max_value = C.MAX_INT32_VALUE,
         )
     hash = serializers.CharField(required= False)
