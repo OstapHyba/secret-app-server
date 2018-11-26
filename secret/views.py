@@ -33,8 +33,6 @@ class SecretGetAPIView(APIView):
     def get(self, request, uuid):
         try:
             payload = Secret.getDataByHash(uuid)
-            serializer = self.serializer_class(data= payload)
-            serializer.is_valid(raise_exception= True)
         except NotFound as e:
             return Response(
                 {'error': e.__str__()},
@@ -46,4 +44,4 @@ class SecretGetAPIView(APIView):
                 status= status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-        return Response(serializer.data, status= status.HTTP_200_OK)
+        return Response(payload, status= status.HTTP_200_OK)
