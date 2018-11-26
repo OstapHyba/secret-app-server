@@ -1,8 +1,8 @@
 from datetime import timedelta
 
 SECRET_KEY = '<secret_key>'  # you can generate it here -> https://www.miniwebtool.com/django-secret-key-generator/
-DEBUG = True
-ALLOWED_HOSTS = ('<you-host-name>',)
+DEBUG = True  # 'False' on production
+ALLOWED_HOSTS = ('<you-host-name>',)  # for example 'localhost' or 'domain.com'
 
 # JWT settings
 JWT_SETTINGS = {
