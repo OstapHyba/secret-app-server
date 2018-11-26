@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -139,17 +138,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# JWT settings
-JWT_SETTINGS = {
-    'JWT_ALGORITHM': 'HS256',
-    'JWT_AUDIENCE': None,
-    'JWT_AUTH_HEADER_PREFIX': 'JWT',
-    'JWT_ISSUER': None,
-    'JWT_LEEWAY': 0,
-    'JWT_SECRET_KEY': 'bllwu*#3q^ca3nmoxx+vx+&89$zri05xpo3&2u7i!pwssbfq5r',
-    'JWT_VERIFY': True,
-    'JWT_VERIFY_EXPIRATION': False,
-    'JWT_EXPIRATION_DELTA': timedelta(seconds= 0),
-    'JWT_ALLOW_REFRESH': True,
-    'JWT_REFRESH_EXPIRATION_DELTA': timedelta(seconds= 0),
-}

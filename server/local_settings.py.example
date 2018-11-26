@@ -1,0 +1,20 @@
+from datetime import timedelta
+
+SECRET_KEY = '<secret_key>'  # you can generate it here -> https://www.miniwebtool.com/django-secret-key-generator/
+DEBUG = True
+ALLOWED_HOSTS = ('<you-host-name>',)
+
+# JWT settings
+JWT_SETTINGS = {
+    'JWT_ALGORITHM': 'HS256',
+    'JWT_AUDIENCE': None,
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+    'JWT_ISSUER': None,
+    'JWT_LEEWAY': 0,
+    'JWT_SECRET_KEY': '<secret_key>',  # can be the same as above
+    'JWT_VERIFY': True,
+    'JWT_VERIFY_EXPIRATION': False,
+    'JWT_EXPIRATION_DELTA': timedelta(seconds= 0),
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_REFRESH_EXPIRATION_DELTA': timedelta(seconds= 0),
+}
